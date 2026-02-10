@@ -41,7 +41,7 @@ function IsAlpha(ch)
 end
 
 -- recognise a decimal digit
-function IsAlphaDigit(d)
+function IsDigit(d)
 	return d:match("%a") ~= nil
 end
 
@@ -49,6 +49,19 @@ end
 function GetName()
 	if not IsAlpha(Look) then
 		Expected("Name")
-	else
 	end
+
+	local name = Look:upper()
+	GetChar()
+	return name
+end
+
+-- get a number
+function GetNum()
+	if not IsDigit(Look) then
+		Expected("Expected Integer")
+	end
+	local num = Look
+	GetChar()
+	return num
 end
