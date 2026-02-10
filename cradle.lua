@@ -65,3 +65,22 @@ function GetNum()
 	GetChar()
 	return num
 end
+
+--Output a String with Tab
+function Emit(s)
+	io.write(TAB .. s)
+end
+
+-- Output a String with Tab and CRLF
+function EmitLn(s)
+	Emit(s)
+	io.write("\n")
+end
+
+-- Initialize
+function Init()
+	GetChar()
+end
+
+-- main program
+Init()
