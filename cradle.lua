@@ -36,6 +36,19 @@ function Match(ch)
 end
 
 -- recognise an alpha character | note "%a" is the check for Alpha chars
-function isAlpha(ch)
+function IsAlpha(ch)
 	return ch:match("%a") ~= nil
+end
+
+-- recognise a decimal digit
+function IsAlphaDigit(d)
+	return d:match("%a") ~= nil
+end
+
+-- get an identifier
+function GetName()
+	if not IsAlpha(Look) then
+		Expected("Name")
+	else
+	end
 end
