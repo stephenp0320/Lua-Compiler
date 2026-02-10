@@ -68,7 +68,7 @@ end
 
 --Output a String with Tab
 function Emit(s)
-	io.write(TAB .. s)
+	io.write(Tab .. s)
 end
 
 -- Output a String with Tab and CRLF
