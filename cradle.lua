@@ -42,7 +42,7 @@ end
 
 -- recognise a decimal digit
 function IsDigit(d)
-	return d:match("%a") ~= nil
+	return d:match("%d") ~= nil
 end
 
 -- get an identifier
@@ -82,5 +82,10 @@ function Init()
 	GetChar()
 end
 
+-- parse and translate a math expression
+function Expression()
+	EmitLn("MOVE #" .. GetNum() .. ",D0")
+end
 -- main program
 Init()
+Expression()
